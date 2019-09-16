@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teste Cookie</title>
+        <script src="js/cookies.js"></script>
+        <script>
+            window.onload=function(){
+                //setCookie(36000 * 100 * 24, "teste", "valor123");
+                document.getElementById("h").innerHTML = getCookie("teste");
+            }        
+        </script>
+    </head>
+    <body>
+        <h1 id="h"></h1>
+    </body>
+</html>

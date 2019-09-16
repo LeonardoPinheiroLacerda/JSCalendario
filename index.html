@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function getParam() {
+            str = window.location.href;
+            var start = str.indexOf("=") + 1;
+            var end = str.length;
+            var temp = str.substring(start, end);
+            if (temp.length > 3) {
+                return "";
+            } else {
+                return temp;
+            }
+        }
+
+        var param = getParam();
+
+        document.title = "calendario " + param;
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="style/theme.css">
+    <script src="js/dias.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/distribuiDias.js"></script>
+    <script src="js/cookies.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+
+        var feriado = getCookie("feriados").split(",");
+
+        setStr();
+        if (param != "") {
+            pushStr(param);
+        }
+
+        setCookie(36000 * 100 * 24, "feriados", str);     
+
+        feriado = getCookie("feriados").split(",");
+
+
+
+
+        var ano = 2019;
+
+        if (ano % 4 == 0 || ano % 100 == 0 || ano % 400 == 0) {
+            meses[2].nDias = 29;
+        } else {
+            meses[2].nDias = 28;
+        }
+
+        for (var i = 1; i <= 12; i++) {
+            createFields(meses[i].nome);
+        }
+
+        for (var i = 1; i <= 12; i++) {
+            distribui(meses[i], i);
+        }
+
+        changeClass();
+
+        for (var i = 1; i <= 12; i++) {
+            completa(i);
+        }
+
+        finalDeSemana(1);
+
+        feriados();
+
+    </script>
+</body>
+
+</html>

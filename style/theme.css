@@ -1,0 +1,107 @@
+/* ----------------------- theme do index.html -------------------------------*/
+
+td{
+    text-align:center;
+}
+
+.Janeiro{
+    position : absolute;
+    top:0px;
+    left:0px;
+}
+.Fevereiro{
+    position : absolute;
+    top:0px;
+    left:170px;
+}
+
+.Março{
+    position : absolute;
+    top:0px;
+    left:340px;
+}
+
+.Abril{
+    position : absolute;
+    top:0px;
+    left:510px;
+}
+
+.Maio{
+    position : absolute;
+    top: 208px;
+    left: 0px;
+}
+
+.Junho{
+    position : absolute;
+    top:208px;
+    left: 170px;
+}
+
+.Julho{
+    position : absolute;
+    top:208px;
+    left: 340px;
+}
+
+.Agosto{
+    position : absolute;
+    top:208px;
+    left: 510px;
+}
+
+.Setembro{
+    position : absolute;
+    top:416px;
+    left: 0px;
+}
+
+.Outubro{
+    position : absolute;
+    top:416px;
+    left: 170px;
+}
+
+.Novembro{
+    position : absolute;
+    top:416px;
+    left: 340px;
+}
+
+.Dezembro{
+    position : absolute;
+    top:416px;
+    left: 510px;
+}
+
+.gray{
+    color: #bfbfbf;
+}
+
+.weekS{
+    font-weight: bold;
+}
+
+#mes{
+    font-weight: bold;
+    color: red;
+}
+
+.feriado{
+    background-color:#84fc79;
+}
+
+.finalDeSemana{
+    color:red;
+}
+
+a{
+    color:blue;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+/* ----------------------------------- theme da agenda.html --------------------------------*/
